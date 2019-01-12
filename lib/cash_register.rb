@@ -24,6 +24,8 @@ class CashRegister
   end
   
   def void_last_transaction
-    binding.pry
+    @total = @total - @last_item
+    @last_item = nil
+    @items.pop
   end
 end
