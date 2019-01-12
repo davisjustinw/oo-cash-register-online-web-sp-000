@@ -1,3 +1,4 @@
+require 'pry'
 class CashRegister
   attr_accessor :discount, :total
   
@@ -12,6 +13,7 @@ class CashRegister
   
   def apply_discount
     if @discount
+      binding.pry
       @total = @total * @discount
       return "After the discount, the total comes to #{@discount}."
     else
